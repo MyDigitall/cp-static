@@ -1,0 +1,36 @@
+F<?xml version="1.0" encoding="UTF-8"?>
+<suite name="dragonfly-aet-static-migration-colgatetotal.id" company="Colgate Palmolive" project="dragonFly-static" domain="http://www.colgatetotal.id">
+    <test name="dragonfly-aet-static-migration-colgatetotal.id" useProxy="rest">
+        <collect>
+           <header key="Authorization" value="Basic dm1sY29sZ2F0ZTp0b290aHBhc3Rl"/>
+            <modify-cookie action="add" cookie-name="cookies_allowed" cookie-value="1"/>
+            <open/>
+            <wait-for-page-loaded/>
+            <sleep duration="2000"/>
+            <screen width="1920" height="1080" name="desktop"/>
+			<source/>
+            <status-codes/>
+            <js-errors/>
+        </collect>
+        <compare>
+            <screen comparator="layout"/>
+            <source comparator="source" compareType="markup"/>
+            <status-codes filterRange="400,600">
+            </status-codes>
+            <js-errors/>
+        </compare>
+        <urls>
+            <url href="/app/ColgateTotal/ID/ID/benefits.cwsp"/>
+<url href="/app/ColgateTotal/ID/ID/home.cwsp"/>
+<url href="/app/ColgateTotal/ID/ID/how-it-works.cwsp"/>
+<url href="/app/ColgateTotal/ID/ID/mouthwash/advanced-pro-shield.cwsp"/>
+<url href="/app/ColgateTotal/ID/ID/search-results.cwsp"/>
+<url href="/app/ColgateTotal/ID/ID/toothpaste/charcoal-deep-clean.cwsp"/>
+<url href="/app/ColgateTotal/ID/ID/toothpaste/clean-mint.cwsp"/>
+<url href="/app/ColgateTotal/ID/ID/toothpaste/professional-clean-gel.cwsp"/>
+<url href="/app/ColgateTotal/ID/ID/toothpaste/professional-clean-paste.cwsp"/>
+<url href="/app/ColgateTotal/ID/ID/toothpaste/professional-whitening.cwsp"/>
+<url href="/app/ColgateTotal/ID/ID/where-to-buy.cwsp"/>
+        </urls>
+    </test>
+</suite>
